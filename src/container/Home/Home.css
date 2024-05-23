@@ -1,0 +1,106 @@
+.app__home {
+    background-color: var(--color-black);
+}
+
+.app__home-h1 {
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    line-height: 117px;
+    font-size: 90px;
+}
+
+.app__home .app__wrapper_img img {
+    width: 72%;
+}
+
+.custom__button.home {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 08px 32px 8px 32px;
+    background: linear-gradient(to right, var(--color-black) 50%, var(--color-golden) 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position .5s;
+}
+
+.custom__button.home:hover {
+    color: var(--color-golden);
+    background-position: left;
+}
+
+.custom__button.home svg {
+    margin-left: 1rem;
+}
+
+#back-to-top {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    bottom: 65px;
+    right: 30px;
+    z-index: 99;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#back-to-top .top {
+    margin: 0;
+    color: var(--color-golden);
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    width: 50px;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 28px;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#back-to-top .top:before {
+    content: "";
+    background: linear-gradient(180deg, #dcca87, #dcca87, rgba(220, 202, 135, 0.84));
+    position: absolute;
+    left: 24px;
+    bottom: 50px;
+    height: 50px;
+    width: 1px;
+}
+
+@media screen and (min-width: 2000px) {
+    .app__home-h1 {
+        font-size: 180px;
+        line-height: 210px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__home-h1 {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__home-h1 {
+        font-size: 70px;
+        line-height: 87px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app__home-h1 {
+        font-size: 50px;
+        line-height: 70px;
+    }
+}
